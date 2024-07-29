@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+	transform: translate(-50%, -50%) scale(1.1);
+    filter: blur(15px);
+}
+
+.background-video video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rectangle {
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #242424;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+	margin: 10px;
+}
+
+.avatar {
+	width: 220px;
+	height: 220px;
+	border-radius: 1000px;
+	margin: 0;
+}
+
+.social-links-rectangle {
+    display: flex;
+    gap: -10px;
+}
+
+.nickname {
+    font-family: "Roboto", sans-serif;
+    color: white;
+	margin: 0;
+	margin-bottom: -10px;
+}
+
+.discord {
+    height: 24px;
+    width: auto;
+    border-radius: 100px;
+    margin: 0;
+    margin-bottom: -10px;
+    margin-top: -30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+}
+
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes circle-animation {
+    0% {
+        top: 0;
+        left: 0;
+        transform: scale(0);
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+        transform: scale(1);
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+        transform: scale(0);
+    }
+}
+
+.nickname {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    margin: 0 7px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+	transition: filter 0.2s ease-in-out;
+    border-radius: 1000px;
+}
+
+.social-links img:hover {
+  filter: blur(2px);
+}
+
+.spotifyplayer {
+  width: 320px;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #242424;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.spotifynow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.spotifynow img {
+  transform: scale(0.64);
+  border-radius: 30px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 3px;
+    transition: transform 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.hide {
+    display: none;
+}
+
+.rectangle-right {
+    width: 400px;
+    height: 515px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #242424;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 20px;
+    z-index: 0;
+    margin: 10px;
+    left: calc(50% + 161px);
+    opacity: 0;
+    margin-top: 20px;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.rectangle-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.move-left {
+    transform: translateX(-150px);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rectangle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #242424;
+    border-radius: 20px;
+    margin-left: -20px;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    right: -50px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -29px;
+}
+
+.rectangle-button img {
+    width: 32px;
+    height: 32px;
+}
+
+.move-right {
+    transform: translateX(415px);
+}
+
+.hithere {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin: 0;
+    padding: 25px;
+}
+
+.nometa {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    margin: 0;
+    padding: 25px;
+}
+
+.email {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 85px;
+    left: 10px;
+    margin: 0;
+    padding: 25px;
+}
+
+.email2 {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.ayanami {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    left: 25px;
+    margin: 0;
+    border-radius: 20px;
+}
